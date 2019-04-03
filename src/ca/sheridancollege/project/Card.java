@@ -12,6 +12,16 @@ public class Card {
 
     private Suit suit;
     private Rank rank;
+    
+    /**
+     *
+     * @param suit
+     * @param rank
+     */
+    public Card(Suit suit, Rank rank) {
+        this.suit = suit;
+        this.rank = rank;
+    }
 
     public Suit getSuit() {
         return this.suit;
@@ -27,16 +37,6 @@ public class Card {
 
     public void setRank(Rank rank) {
         this.rank = rank;
-    }
-
-    /**
-     *
-     * @param suit
-     * @param rank
-     */
-    public Card(Suit suit, Rank rank) {
-        // TODO - implement Card.Card
-        throw new UnsupportedOperationException();
     }
 
 }
