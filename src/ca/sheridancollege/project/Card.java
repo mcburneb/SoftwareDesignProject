@@ -6,19 +6,19 @@ package ca.sheridancollege.project;
  */
 public class Card {
 
-    public enum Rank { SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE }
+    public enum Value { SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE }
 
     public enum Suit { HEARTS, DIAMONDS, SPADES, CLUBS }
 
     private Suit suit;
-    private Rank rank;
+    private Value rank;
     
     /**
      *
      * @param suit
      * @param rank
      */
-    public Card(Suit suit, Rank rank) {
+    public Card(Suit suit, Value rank) {
         this.suit = suit;
         this.rank = rank;
     }
@@ -31,11 +31,11 @@ public class Card {
         this.suit = suit;
     }
 
-    public Rank getRank() {
+    public Value getValue() {
         return this.rank;
     }
 
-    public void setRank(Rank rank) {
+    public void setValue(Value rank) {
         this.rank = rank;
     }
 
