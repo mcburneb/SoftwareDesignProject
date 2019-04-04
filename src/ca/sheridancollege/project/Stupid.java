@@ -19,7 +19,7 @@ public class Stupid {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GameStart gameStart = new GameStart();
+        GameStarter gameStart = new GameStarter();
         
         // create the deck then shuffle it
         ArrayList<Card> deck = gameStart.createDeck();
