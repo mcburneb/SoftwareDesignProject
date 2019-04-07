@@ -1,5 +1,7 @@
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author Brianna McBurney
@@ -22,6 +24,10 @@ public class Card {
         this.suit = suit;
         this.rank = rank;
     }
+    
+    public Card(){
+        
+    };
 
     public Suit getSuit() {
         return this.suit;
@@ -39,4 +45,30 @@ public class Card {
         this.rank = rank;
     }
 
+    public boolean isValidCard(String chosenValue, String chosenSuit, ArrayList<Card> playerHand) {
+        Boolean returnValue = false;
+        try {
+            Value chosenVALUE = Value.valueOf(chosenValue.toUpperCase());
+            Suit chosenSUIT = Suit.valueOf(chosenSuit.toUpperCase());
+
+            for (int i=0;i<playerHand.size();i++) {
+
+                if (chosenVALUE == playerHand.get(i).getValue() && chosenSUIT == playerHand.get(i).getSuit()) {
+                    returnValue = true;
+                }
+                
+            }
+        } catch (IllegalArgumentException ex) {
+            returnValue = false;
+        }
+        
+        return returnValue;
+    }
+    
+    @Override
+    public String toString() {
+        String cardString = this.getValue() + " " + this.getSuit();
+        
+        return cardString;
+    }
 }

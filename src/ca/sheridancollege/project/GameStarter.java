@@ -9,20 +9,20 @@ import java.util.Collections;
  * @author Brianna McBurney
  */
 public class GameStarter {
-    public ArrayList<Card> player1Hand;
-    public ArrayList<Card> player2Hand;
-    public ArrayList<Card> player3Hand;
+    public ArrayList<Card> player1hand;
+    public ArrayList<Card> player2hand;
+    public ArrayList<Card> player3hand;
 
-    public ArrayList<Card> getPlayer1Hand() {
-        return player1Hand;
+    public ArrayList<Card> getPlayer1hand() {
+        return player1hand;
     }
 
-    public ArrayList<Card> getPlayer2Hand() {
-        return player2Hand;
+    public ArrayList<Card> getPlayer2hand() {
+        return player2hand;
     }
 
-    public ArrayList<Card> getPlayer3Hand() {
-        return player3Hand;
+    public ArrayList<Card> getPlayer3hand() {
+        return player3hand;
     }
     
     /**
@@ -40,23 +40,26 @@ public class GameStarter {
      * @return ArrayList of the remaining cards
      */
     public ArrayList<Card> deal(int numPlayers, ArrayList<Card> cards) {
+        player1hand = new ArrayList<>();
+        player2hand = new ArrayList<>();
+        player3hand = new ArrayList<>();
         if (numPlayers == 2) {
             for (int i = 0; i<cards.size(); i++) {
-                if (0 <= i && i<7){
-                    player1Hand.add(cards.get(i));                    
-                } else if (7 <= i && i < 14) {
-                    player2Hand.add(cards.get(i));
+                if (0 <= i && i<6){
+                    player1hand.add(cards.get(i));                    
+                } else if (6 <= i && i < 18) {
+                    player2hand.add(cards.get(i));
                 }                
                 cards.remove(i);
             }            
         } else if (numPlayers == 3) {
             for (int i = 0; i<cards.size(); i++) {
-                if (0 <= i && i<7){
-                    player1Hand.add(cards.get(i));
-                } else if (7 <= i && i < 14) {
-                    player2Hand.add(cards.get(i));
-                }  else if (14 <= i && i < 21) {
-                    player3Hand.add(cards.get(i));
+                if (0 <= i && i<6){
+                    player1hand.add(cards.get(i));
+                } else if (6 <= i && i < 12) {
+                    player2hand.add(cards.get(i));
+                }  else if (12 <= i && i < 18) {
+                    player3hand.add(cards.get(i));
                 } 
                 cards.remove(i);
             }
