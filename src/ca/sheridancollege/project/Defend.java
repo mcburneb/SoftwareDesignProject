@@ -53,7 +53,7 @@ public class Defend {
                             int compareValue = cc.compare(defendingCard, attackingCard);
                             // make sure the value of the chosen card is creater than that of the attacking card
                             if (compareValue == 1) {
-                                System.out.println(defendingPlayer.getName() + " defended the attack with " + defendingCard.toString());
+                                System.out.println(defendingPlayer.getName() + " defended the attack with " + defendingCard.toString() + "\n");
                                 askAgain = false;
                                 
                             } else {
@@ -61,7 +61,7 @@ public class Defend {
                             }
                         } else if(chosenSUIT == trump) {
                             // trump beats the attacking card no matter what the values are
-                            System.out.println(defendingPlayer.getName() + " defended the attack with " + defendingCard.toString());
+                            System.out.println(defendingPlayer.getName() + " defended the attack with " + defendingCard.toString() + "\n");
                             askAgain = false;
                             
                             

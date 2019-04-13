@@ -2,8 +2,6 @@ package ca.sheridancollege.project;
 
 import ca.sheridancollege.project.Card.Suit;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
 
 /**
  *
@@ -13,7 +11,6 @@ public class Stupid {
 
     private static ArrayList<Card> player1hand;
     private static ArrayList<Card> player2hand;
-    private static ArrayList<Card> player3hand;
 
     private static ArrayList<Card> remainingDeck;
     private static ArrayList<Card> onTable;
@@ -76,10 +73,10 @@ public class Stupid {
 
                         CardComparatorByBothValues comparator = new CardComparatorByBothValues();
                         // find the card the player last played and remove it from their hand
-                        for (int f = 0; f < players.get(attacker).getHand().size(); f++) {
-                            int matches = comparator.compare(players.get(attacker).getHand().get(f), onTable.get(onTable.size() - 1));
+                        for (int i = 0; i < players.get(attacker).getHand().size(); i++) {
+                            int matches = comparator.compare(players.get(attacker).getHand().get(i), onTable.get(onTable.size() - 1));
                             if (matches == 0) {
-                                players.get(attacker).getHand().remove(f);
+                                players.get(attacker).getHand().remove(i);
                             }
                         }
 
@@ -99,10 +96,10 @@ public class Stupid {
 
                         CardComparatorByBothValues comparator = new CardComparatorByBothValues();
                         // find the card the player last played and remove it from their hand
-                        for (int f = 0; f < players.get(defender).getHand().size(); f++) {
-                            int matches = comparator.compare(players.get(defender).getHand().get(f), onTable.get(onTable.size() - 1));
+                        for (int i = 0; i < players.get(defender).getHand().size(); i++) {
+                            int matches = comparator.compare(players.get(defender).getHand().get(i), onTable.get(onTable.size() - 1));
                             if (matches == 0) {
-                                players.get(defender).getHand().remove(f);
+                                players.get(defender).getHand().remove(i);
                             }
                         }
 
@@ -133,7 +130,7 @@ public class Stupid {
 
             onTable.clear();
             replenishHand();
-            System.out.println("End of the turn");
+            System.out.println("End of the turn\n");
             
             if (attacker == 0) {
                 attacker = 1;
