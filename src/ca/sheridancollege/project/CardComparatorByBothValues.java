@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author artur
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class CardComparatorByBothValues implements Comparator<Card>{
 

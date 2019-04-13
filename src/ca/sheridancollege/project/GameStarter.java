@@ -6,7 +6,7 @@ import java.util.Collections;
 
 /**
  *
- * @author Brianna McBurney
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class GameStarter {
     public ArrayList<Card> player1hand;

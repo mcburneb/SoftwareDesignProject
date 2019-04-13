@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author artur
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class DiscardPile {
     public static ArrayList<Card> discardPile;

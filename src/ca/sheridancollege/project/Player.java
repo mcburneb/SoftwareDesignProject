@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Briana McBurney
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class Player {
 

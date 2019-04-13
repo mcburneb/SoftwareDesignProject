@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Brianna McBurney
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class Attack {
 

@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Brianna McBurney
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class CardComparator implements Comparator<Card>{
     

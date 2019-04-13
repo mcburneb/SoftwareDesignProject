@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Brianna McBurney
+ * @author Brianna McBurney, Artur Hrystenko, & Shaheer Syed
  */
 public class Stupid {
 
