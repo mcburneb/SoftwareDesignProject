@@ -29,6 +29,7 @@ public class GameStarter {
     }
 
     /**
+     * Give each player 6 cards
      * 
      * @param numPlayers
      * @param cards ArrayList holding the deck of cards
@@ -51,12 +52,23 @@ public class GameStarter {
         return cards;
     }
 
+    /**
+     * Create the trump suit by getting the SUIT of the card on top of the pile
+     * 
+     * @param remainingCards
+     * @return The trump SUIT
+     */
     public Suit createTrump(ArrayList<Card> remainingCards) {
         Suit trumpSuit = remainingCards.get(0).getSuit();
         
         return trumpSuit;
     }
 
+    /**
+     * Create the deck of cards that will be used
+     * 
+     * @return 
+     */
     public ArrayList<Card> createDeck() {
         ArrayList<Card> cards = new ArrayList<>();
         

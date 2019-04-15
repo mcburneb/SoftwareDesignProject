@@ -8,6 +8,13 @@ import java.util.Comparator;
  */
 public class CardComparator implements Comparator<Card>{
     
+    /**
+     *  
+     *              Attacking                   Defending
+     * @param card1 Attacking Card      or      Defending card
+     * @param card2 Card on table       or      Attacking card
+     * @return If the card values match  or     If the defending card has a greater value than the attacking card
+     */
     @Override
     public int compare(Card card1, Card card2) {
         int card1Value = 0;

@@ -48,24 +48,30 @@ public class Player {
         this.hand = hand;
     }
 
-    /**
-     *
-     * @param isAttacking
-     */
-    public void attack(int isAttacking) {
-        // TODO - implement Player.attack
-        throw new UnsupportedOperationException();
-    }
+//    /**
+//     *
+//     * @param isAttacking
+//     */
+//    public void attack(int isAttacking) {
+//        // TODO - implement Player.attack
+//        throw new UnsupportedOperationException();
+//    }
+//
+//    /**
+//     *
+//     * @param isAttacking
+//     */
+//    public void defend(int isAttacking) {
+//        // TODO - implement Player.defend
+//        throw new UnsupportedOperationException();
+//    }
 
     /**
-     *
-     * @param isAttacking
+     * If a card in the players had matches a card on the table, remove that card
+     * 
+     * @param cardsOnTable The cards that have been played that turn
+     * @param player The current player
      */
-    public void defend(int isAttacking) {
-        // TODO - implement Player.defend
-        throw new UnsupportedOperationException();
-    }
-
     public void removeFromHand(ArrayList<Card> cardsOnTable, Player player) {
         CardComparatorByBothValues comp = new CardComparatorByBothValues();
         Card cardToRemove = cardsOnTable.get(cardsOnTable.size() - 1);

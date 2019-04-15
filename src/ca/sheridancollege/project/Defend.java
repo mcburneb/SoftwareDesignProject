@@ -16,16 +16,19 @@ public class Defend {
         Card defendingCard = null;
         ArrayList<Card> playerHand = defendingPlayer.getHand();
 
-        do  {
-            
+        do {
             System.out.println(defendingPlayer.getName() + " pick a card to defend the attack ("+ attackingCard.toString() +") with or enter 0 to fold");
+            
+            // display the cards in the defendors hand
             for (int i=0;i<playerHand.size();i++) {
                 System.out.print(playerHand.get(i).toString() + "\t");
             }
             System.out.println(" ");
+            
+            // get the players input for the card they want to defend with
             String chosenCard = in.nextLine();
 
-            if ("0".equals(chosenCard)) {
+            if (chosenCard.equals("0")) { // user has decided to not defend and fold
                 break;
             } else {
                 String[] parts = chosenCard.split(" ");
@@ -69,8 +72,8 @@ public class Defend {
                             System.out.println("The suits have to match!\n");
                         }
                     }
-                } else {
-                    System.out.println("That's not a card, please try again!\n");
+                } else {  // player didn't enter 2 words
+                    System.out.println("You have to enter the value of the card and the suit of the card (VALUE SUIT), please try again!\n");
                 }   
             }          
 
@@ -79,6 +82,13 @@ public class Defend {
         return defendingCard;
     }
 
+    /**
+     * Take the cards on the table and add them to the players hand.
+     * 
+     * @param playerHand
+     * @param onTable
+     * @return The players hand with the cards from the table
+     */
     public ArrayList<Card> pickUpCards(ArrayList<Card> playerHand, ArrayList<Card> onTable) {
         
         for (int i=0;i<onTable.size();i++) {

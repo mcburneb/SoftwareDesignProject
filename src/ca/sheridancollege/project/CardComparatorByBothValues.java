@@ -10,6 +10,13 @@ import java.util.Comparator;
  */
 public class CardComparatorByBothValues implements Comparator<Card>{
 
+    /**
+     * Comparing both the SUIT and VALUE of the two cards
+     * 
+     * @param c1
+     * @param c2
+     * @return 
+     */
     @Override
     public int compare(Card c1, Card c2) {
         int valueCompare = 0;

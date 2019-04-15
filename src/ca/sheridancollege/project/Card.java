@@ -45,14 +45,23 @@ public class Card {
         this.rank = rank;
     }
 
+    /**
+     * Make sure the card the player has chosen to play is in their hand
+     * 
+     * @param chosenValue The value the player entered
+     * @param chosenSuit The suit the player entered
+     * @param playerHand The ArrayList that holds the player's hand
+     * @return True if the card is in the player's hand, False if it doesn't
+     */
     public boolean isValidCard(String chosenValue, String chosenSuit, ArrayList<Card> playerHand) {
         Boolean returnValue = false;
         try {
+            // convert the input for suit and value to SUIT and VALUE
             Value chosenVALUE = Value.valueOf(chosenValue.toUpperCase());
             Suit chosenSUIT = Suit.valueOf(chosenSuit.toUpperCase());
 
+            // comapre each card in the players hand to the chosen card
             for (int i=0;i<playerHand.size();i++) {
-
                 if (chosenVALUE == playerHand.get(i).getValue() && chosenSUIT == playerHand.get(i).getSuit()) {
                     returnValue = true;
                 }
@@ -65,6 +74,10 @@ public class Card {
         return returnValue;
     }
     
+    /**
+     * 
+     * @return 
+     */
     @Override
     public String toString() {
         String cardString = this.getValue() + " " + this.getSuit();
