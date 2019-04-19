@@ -88,9 +88,10 @@ public class Attack {
         return attackingCard;
     }
 
-    public void continueAttacking() {
-        // TODO - implement Attack.continueAttacking
-        throw new UnsupportedOperationException();
-    }
+    //this method is no longer in use
+//    public void continueAttacking() {
+//        // TODO - implement Attack.continueAttacking
+//        throw new UnsupportedOperationException();
+//    }
 
 }
